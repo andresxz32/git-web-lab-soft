@@ -1,0 +1,21 @@
+<div class="container__versions-img">
+    <div class="container__git">
+        <img src="../assets/img/git.jpeg" alt="Imagen de git">
+    </div>
+    <div class="container__buttons">
+        <button (click)="component='gitHub'">
+            Git Hub
+        </button>
+        <button (click)="component='gitLab'">
+            Git Lab
+        </button>
+        <button (click)="component='bitBucket'">
+            Bit Bucket
+        </button>
+    </div>
+    <div class="container__repositories">
+        <app-gitlab *ngIf="component === 'gitLab'"></app-gitlab>
+        <app-github *ngIf="component === 'gitHub'"></app-github>
+        <app-bitbucket *ngIf="component === 'bitBucket'"></app-bitbucket>
+    </div>
+</div>
